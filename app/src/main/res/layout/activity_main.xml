@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+
+
+
+        <fragment
+            android:id="@+id/barcode_scanner"
+            android:name="info.androidhive.barcode.BarcodeReader"
+            android:layout_width="300dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_height="400dp"
+            app:auto_focus="true"
+            app:use_flash="false" />
+
+
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:background="@drawable/camera_stoke"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_height="400dp">
+
+
+                <info.androidhive.barcode.ScannerOverlay
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#44000000"
+                    app:line_color="@color/colorPrimary"
+                    app:line_speed="6"
+                    app:line_width="4"
+                    app:square_height="200"
+                    app:square_width="200"/>
+
+
+                <ImageView
+                    android:layout_width="221dp"
+                    android:layout_height="230dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_camera_square" />
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+</FrameLayout>
